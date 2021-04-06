@@ -7,6 +7,7 @@ public class MainClass {
         try {
             TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
             telegramBotsApi.registerBot(new JarvisBot());
+            telegramBotsApi.registerBot(new WeatherHandlers());
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
